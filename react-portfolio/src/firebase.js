@@ -3,10 +3,9 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { getStorage } from "firebase/storage";
-import { getFirestore } from "firebase/firestore/lite";
+import { getFirestore } from "firebase/firestore"; // ✅ correct import
 import { getAnalytics } from "firebase/analytics";
 
-// ✅ Your Firebase config — this part looks good
 const firebaseConfig = {
   apiKey: "AIzaSyAMiawiuNIgMCvMF7UL38UfxWoZfi7qG74",
   authDomain: "react-app-27064.firebaseapp.com",
@@ -17,12 +16,10 @@ const firebaseConfig = {
   measurementId: "G-XCD803NQEF"
 };
 
-// ✅ Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// ✅ Export everything you're trying to use elsewhere
 export const auth = getAuth(app);
-export const db = getFirestore(app);
+export const db = getFirestore(app); // ✅ now works with collection() and getDocs()
 export const storage = getStorage(app);
 export const analytics = getAnalytics(app);
 
