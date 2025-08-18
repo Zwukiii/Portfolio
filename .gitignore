@@ -1,0 +1,24 @@
+# Windows/system files
+AppData/
+Application Data/
+Cookies/
+Local Settings/
+My Documents/
+NetHood/
+PrintHood/
+Recent/
+SendTo/
+Start Menu/
+Templates/
+'Temporary Internet Files'/
+
+# User-specific files
+.bash_history
+.config/
+.cursor/
+.docker/
+.gitconfig
+
+# Project files
+node_modules/
+.cache/
